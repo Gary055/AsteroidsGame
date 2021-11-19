@@ -19,23 +19,22 @@ public void draw()
   for(int i = 0; i < Backdrop.length; i++)
     Backdrop[i].show();
    Jeffery.show();
-   Jeffery.move(); 
+   Jeffery.move();
    if(keyPressed)
    {
      if(key == 'a')
      {
-       double x = 0;
-       Jeffery.turn(x-=10);
+       Jeffery.spin -= 0.1;
      }
      if(key == 'd')
      {
-       double x = 0;
-       Jeffery.turn(x+=10);
+       Jeffery.spin += 0.1;
      }
      if(key == 'w')
      {
-       Jeffery.accelerate(0.2);
+       Jeffery.accelerate(0.1);
      }
    }
+   Jeffery.turn(Jeffery.spin);
   //your code here
 }
