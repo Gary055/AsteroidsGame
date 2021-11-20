@@ -1,5 +1,6 @@
 class Spaceship extends Floater  
 {   
+  protected double spin;
   public Spaceship()
   {
     myCenterX = 500;
@@ -12,14 +13,35 @@ class Spaceship extends Floater
     xCorners[1] = -22;
     yCorners[1] = 10;
     xCorners[2] = -8;
-    yCorners[2] = 25;
-    xCorners[3] = 18;
+    yCorners[2] = 20;
+    xCorners[3] = 28;
     yCorners[3] = 0;
     xCorners[4] = -8;
-    yCorners[4] = -25;
+    yCorners[4] = -20;
     xCorners[5] = -22;
     yCorners[5] = -10;
     myColor = color(255);
+  }
+  public void addspin(double x){spin += x;}
+  public void hyperspace()
+  {
+    myCenterX = Math.random()*1000;
+    myCenterY = Math.random()*1000;
+    myXspeed = myYspeed = 0;
+    spin = 0;
+  }
+  public void pew(double speed)
+  {
+    double MyX, MyY, speedX, speedY;
+    MyX = myCenterX;
+    MyY = myCenterY;
+    speedX = speed * Math.cos(myPointDirection * (Math.PI/180));
+    speedY = speed * Math.sin(myPointDirection * (Math.PI/180));
+    for(int i = 0; i < 1000; i++)
+    {
+    fill(100);
+    ellipse((float)(MyX += speedX), (float)(MyY += speedY), 10, 10);
+    }
   }
   //your code here
 }
