@@ -20,21 +20,29 @@ public void draw()
     Backdrop[i].show();
    Jeffery.show();
    Jeffery.move();
+   Jeffery.turn(Jeffery.spin);
    if(keyPressed)
    {
      if(key == 'a')
      {
-       Jeffery.spin -= 0.1;
+       Jeffery.addspin(-0.1);
      }
      if(key == 'd')
      {
-       Jeffery.spin += 0.1;
+       Jeffery.addspin(0.1);
      }
      if(key == 'w')
      {
        Jeffery.accelerate(0.1);
      }
+     if(key == 'e')
+     {
+       Jeffery.hyperspace();
+     }
+     if(key == ' ')
+     {
+       Jeffery.pew(0.1);
+     }
    }
-   Jeffery.turn(Jeffery.spin);
   //your code here
 }
