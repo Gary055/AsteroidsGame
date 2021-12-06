@@ -37,7 +37,12 @@ public void draw()
      }
      if(key == 'e')
      {
+       Jeffery.n++;
+       if(Jeffery.n == 10)
+       {
        Jeffery.hyperspace();
+       Jeffery.n = 0;
+       }
      }
      if(key == ' ')
      {
