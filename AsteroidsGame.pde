@@ -35,6 +35,10 @@ public void draw()
      {
        Jeffery.accelerate(0.1);
      }
+     if(key == 's')
+     {
+       Jeffery.accelerate(-0.1);
+     }
      if(key == 'e')
      {
        Jeffery.n++;
