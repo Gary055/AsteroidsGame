@@ -1,6 +1,7 @@
 class Spaceship extends Floater  
 {   
   protected double spin;
+  public int n;
   public Spaceship()
   {
     myCenterX = 500;
