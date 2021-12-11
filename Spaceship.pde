@@ -31,18 +31,5 @@ class Spaceship extends Floater
     myXspeed = myYspeed = 0;
     spin = 0;
   }
-  public void pew(double speed)
-  {
-    double MyX, MyY, speedX, speedY;
-    MyX = myCenterX;
-    MyY = myCenterY;
-    speedX = speed * Math.cos(myPointDirection * (Math.PI/180));
-    speedY = speed * Math.sin(myPointDirection * (Math.PI/180));
-    for(int i = 0; i < 1000; i++)
-    {
-    fill(100);
-    ellipse((float)(MyX += speedX), (float)(MyY += speedY), 10, 10);
-    }
-  }
   //your code here
 }
