@@ -2,10 +2,10 @@ class Spaceship extends Floater
 {   
   protected double spin;
   public int n;
-  public Spaceship()
+  public Spaceship(int x, int y)
   {
-    myCenterX = 500;
-    myCenterY = 500;
+    myCenterX = x;
+    myCenterY = x;
     corners = 6;
     xCorners = new int[corners];
     yCorners = new int[corners];
@@ -21,7 +21,7 @@ class Spaceship extends Floater
     yCorners[4] = -20;
     xCorners[5] = -22;
     yCorners[5] = -10;
-    myColor = color(255);
+    myColor = color((int)(Math.random()*100)+155, (int)(Math.random()*100)+155, (int)(Math.random()*100)+155);
   }
   public void addspin(double x){spin += x;}
   public void hyperspace()
